@@ -1,0 +1,8 @@
+=> 
+[32m#<Bookmark:0x00007fee62112008[0m
+ id: [34m[1m1[0m,
+ comment: [31m[1m"[0m[31mMy favorite recipe![0m[31m[1m"[0m,
+ recipe_id: [34m[1m1[0m,
+ category_id: [34m[1m1[0m,
+ created_at: Mon, 13 Jan 2025 10:17:48.673455000 UTC +00:00,
+ updated_at: Mon, 13 Jan 2025 10:17:48.673455000 UTC +00:00[32m>[0m
