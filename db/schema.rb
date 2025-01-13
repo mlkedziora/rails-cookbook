@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_095113) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string "comment"
-    t.bigint "recipe_id"
-    t.bigint "category_id"
+    t.bigint "recipe_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_bookmarks_on_category_id"
