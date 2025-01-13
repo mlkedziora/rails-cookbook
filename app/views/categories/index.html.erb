@@ -2,7 +2,7 @@
 <ul>
   <% @categories.each do |category| %>
     <li>
-      <%= link_to category.name, category_path(category) %>
+      <%= link_to category.name, category_path(category), class: "btn btn-link" %>
       <%= link_to "🗑️", category_path(category), method: :delete, data: { confirm: "Delete #{category.name}?" }, class: "btn btn-danger" %>
     </li>
   <% end %>
