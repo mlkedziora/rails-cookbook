@@ -1,0 +1,27 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+
+  .card {
+    background-color: #252525;
+    border: 1px solid $line-color;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-family: "Mayfest", sans-serif;
+      font-size: 24px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      color: $accent-color;
+    }
+
+    &:hover {
+      background-color: lighten($background-color, 5%);
+    }
+  }
+}

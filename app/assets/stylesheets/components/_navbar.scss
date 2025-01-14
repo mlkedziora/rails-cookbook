@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #000000;
+  border-bottom: 0.1px solid $line-color;
+  height: 45px;
+  font-family: "Mayfest", sans-serif;
+
+  .navbar-logo {
+    height: 35px;
+    width: auto;
+  }
+
+  .nav-link {
+    color: $text-color;
+    font-size: 18px !important;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-left: 20px !important;
+
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+
+  .navbar .navbar-nav .nav-link {
+    padding-left: 40px !important;
+  }
+}

@@ -9,7 +9,18 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+@import "bootstrap";
+@import "font-awesome";
+@import "config/colors";
+@import "config/fonts";
+@import "config/bootstrap_variables";
+@import "config/shared";
+
+@import "components/buttons";
+@import "components/navbar";
+@import "components/hero";
+@import "components/cards";
+
+@import "pages/index";
+@import "pages/categories";
