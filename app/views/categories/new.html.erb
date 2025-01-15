@@ -2,6 +2,8 @@
 
 <%= simple_form_for @category do |f| %>
   <%= f.input :name, label: "Category Name" %>
+  <%= f.input :image_url, label: "Image URL (optional)" %>
+  <%= f.input :image, as: :file, label: "Upload Image (optional)" %>
   <%= f.submit "Create Category", class: "btn btn-primary" %>
 <% end %>
 

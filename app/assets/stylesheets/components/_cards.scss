@@ -1,27 +1,80 @@
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 2rem; /* Space between cards */
+  padding: 0 10vh 6vh; /* Padding to prevent cards from touching screen edges */
+}
 
-  .card {
-    background-color: #252525;
-    border: 1px solid $line-color;
-    border-radius: 8px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.card-category {
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center vertically */
 
-    h3 {
-      font-family: "Mayfest", sans-serif;
-      font-size: 24px;
-      letter-spacing: 1px;
-      text-transform: capitalize;
-      color: $accent-color;
-    }
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  /* Black blur overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1; /* Behind text */
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out; /* Fade effect */
+    opacity: 1; /* Default black blur */
+  }
+
+  /* Centered content */
+  h4 {
+    position: relative; /* Ensure above overlay */
+    z-index: 2; /* Above overlay */
+    font-family: "Mayfest", sans-serif;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    position: relative; /* Ensure above overlay */
+    z-index: 2; /* Above overlay */
+    font-size: 1rem;
+    margin: 0; /* Reset margins */
+    opacity: 0.8;
+  }
+
+  /* Delete link */
+  .delete {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 3; /* Above overlay */
 
     &:hover {
-      background-color: lighten($background-color, 5%);
+      color: red;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03); /* Slight scale-up */
+    transition: transform 0.3s ease-in-out;
+
+    &::before {
+      opacity: 0.3; /* Reduce black blur on hover */
     }
   }
 }

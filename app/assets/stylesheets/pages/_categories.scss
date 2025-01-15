@@ -1,5 +1,49 @@
-.categories-page {
-  .categories {
-    margin-top: 2rem;
+.hero-categories {
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(asset-path('Teppanroom-interior-shot-with-chef_6000x4000.jpg'));
+  background-position: center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1.3rem;
+    font-family: "Mayfest", sans-serif;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.categories-header {
+  display: flex;
+  justify-content: space-between; /* Align header and button */
+  align-items: center;
+  padding: 1rem 11vh; /* Padding for spacing on the sides */
+  margin-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  h3 {
+    font-size: 1.4rem;
+    font-family: "Mayfest", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  a.btn {
+    padding: 0.4rem 1.5rem; /* Controlled padding for consistent button size */
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+
+    &:hover {
+      padding: 0.4rem 7.4rem;
+      border: 1px solid white !important;
+    }
   }
 }

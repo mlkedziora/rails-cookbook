@@ -4,9 +4,9 @@ a.btn {
   justify-content: center;
   align-items: center;
   font-family: 'Exo', sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1.5rem; /* Controlled padding */
   border-radius: 0;
   border: 1px solid white;
   color: white;
@@ -14,5 +14,5 @@ a.btn {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }

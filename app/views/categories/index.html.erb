@@ -1,15 +1,18 @@
-<h1>Cookbook</h1>
-
-<div class="actions mb-4">
-  <%= link_to "Add Category", new_category_path, class: "btn btn-primary" %>
+<div class="hero-categories">
+  <h2>Welcome Back</h2>
 </div>
 
-<h2>Categories:</h2>
+<div class="categories-header">
+  <h3>List of Categories:</h3>
+  <%= link_to "Add Category", new_category_path, class: "btn" %>
+</div>
 
 <div class="categories">
   <% @categories.each do |category| %>
-    <div class="card">
-      <h3><%= link_to category.name, category_path(category) %></h3>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= category.display_image_url %>)">
+      <h4><%= link_to category.name, category_path(category) %></h4>
+      <p><%= category.recipes.count %> recipes</p>
+      <%= link_to "Delete", category_path(category), method: :delete, class: "delete" %>
     </div>
   <% end %>
 </div>

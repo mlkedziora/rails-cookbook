@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to categories_path
+      redirect_to categories_path, notice: 'Category created successfully.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,6 +29,7 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name)
+    # Permit both image_url and image for uploads
+    params.require(:category).permit(:name, :image_url, :image)
   end
 end
